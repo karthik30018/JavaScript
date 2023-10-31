@@ -167,4 +167,166 @@ To access individual key value
 `console.log(dict.colleague) or console.log(dict['colleague'])`
 
 o/p -- a person with whom one works in a profession or business.
+*** 
+# Day 2
+
+## EXPRESSIONS ANS OPERATORS
+
+### Arithmetic operators 
+
+  - `+`
+  - `-`
+  - `*`
+  - `**` Exponential
+  - `%`
+  - `/` 
+  - `++`
+  - `--`
+
+eg.
+
+`console.log(2**3**2)`   
+ o/p - 512   
+first it will do 3 power 2= 9 then 2 power 9= 512
+
+`console.log((2**3)**2)`  
+o/p -  64  
+first it will do 2 power 3 = 8 which is inside () then 8 power 2
+
+`console.log(4%3**2)`  
+o/p - 4
+first it will do 3 power 2 = 9 then 4%9=4
+
+`let a = 10;
+console.log(a++)`  
+o/p - 10
+
+`let a = 10;
+a++;
+console.log(a)`  
+o/p - 11
+
+`let a = 10;
+console.log(++a)`  
+o/p - 11
+
+pre increment/decrement -- first inc/dec then assign the value to variable
+eg.  
+++a,--b etc
+
+post increment/decrement -- first assign the value to variable then inc/dec 
+eg.  
+++a,--b etc
+
+### Assignment operators
+
+- =   x=y
+- +=  x=x+y
+- -=  x=x-y
+- *=  x=x*y
+- /=  x=x/y
+- %=  x=x%y
+- **= x=x**y
+
+### Comparision operators
+
+- ==   equal to 
+- ===  equal value and type
+- !=   not equal to
+- !==  not equal value or equal type
+- >    greater then
+- <    less then
+- <=   less then or equal
+- >=   greater then or equal
+- ?    turnary operator
+
+eg.   
+ 
+`const a=6; const b="6";
+console.log(a==b);
+console.log(a===b)`   
+
+o/p - true  it will return true because value is same 
+      false it will return false because type is different (both value and type should be same)
+
+### Logical operators
+
+- &&
+- ||
+- !
+
+### Comments
+- // single line comment
+- /*  */   multiline comment
+
+## Conditional statements
+
+### if statement
+
+`if(condition){
+    statement;
+}`
+
+### if...else statement
+
+`if(condition){
+   true statement;
+}  
+else{
+  false statement;
+}`
+
+
+### if...else if...else statement
+
+`if(condition 1){
+     statement 1;
+}else if(condition 2){
+  statement 2;
+}else{
+  false statement;
+}`
+
+### Switch statement
+`const expr = value2; `
+`switch(expr){
+  case value1:
+  statement
+  break;
+  case value2:
+  statement
+  break;
+  default:
+  statement
+  
+}`
+
+
+### Turnary Operator 
+
+
+`condition ? exprIfTrue : exprIfFalse`
+
+
+
+### prompt
+
+it ask something from the user.
+
+`prompt("What is your name?")`
+
+
+### alart
+
+it tells something to the user
+
+`alert("error occured..!")`
+
+## TypeCasting
+
+`let a;
+a = Number.parseInt(a)`
+      
+
+
 

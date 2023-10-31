@@ -1,1 +1,1 @@
-console.log("new file");
+console.log(4**5);
