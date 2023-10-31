@@ -6,7 +6,7 @@
 Datatype in js
 --let -- used to declare block scoped variable.
       -- can be updated but cannot be redeclared.(eg.let a=10
-                                                      let a ="a" it display an error message
+                                                      let a ="abc" it display an error message
                                                       but can use like this 
                                                       let a=10
                                                       a="abc")
