@@ -67,17 +67,21 @@ There are 7 primitive datatype
    - B -- Boolean
    - B -- BigInt
    - U -- Undefined  
-
-
-`let a = null;`   
-`let b = 156;`   
-`let c = "Hello";`   
-`let d = Symbol("This is a symbol");`  
-`let e = true;`
-`let f = BigInt("465");`   
-`let g = undefined; or let g;`  it will display undefined in console 
-`console.log(a,b,c,d,e,f,g);
- console.log(typeof(f))`  typeof(variable_name) is used to check the variable type.
+```
+let a = null;  
+let b = 156;  
+let c = "Hello";
+let d = Symbol("This is a symbol");  
+let e = true;
+let f = BigInt("465");   
+let g = undefined; or let g;
+```  
+it will display undefined in console 
+```
+console.log(a,b,c,d,e,f,g);
+console.log(typeof(f))
+ ``` 
+  typeof(variable_name) is used to check the variable type.
 
 
  ## OBJECTS
@@ -85,21 +89,25 @@ There are 7 primitive datatype
  Objects are key value pairs, non primitive datatypes 
 
 eg.  
-`let person{
+```
+let person{
    name:'jhon',
    age:20
-   }`  
+   }
+   ```  
 name,age is key and jhon and 20 is value
 
 eg.  
-`const item = {
+```
+const item = {
     "abc" : null,
     "xyz" : true,
     "klm" : "Hello",
     "hij" : 56,
     "pqr" :undefined
 };
-console.log(item["klm"])`
+console.log(item["klm"])
+```
 if we try to print an undefined key then it will dispaly undefined
 eg.  
 `console.log(item["rst"])`
@@ -110,9 +118,11 @@ eg.
 1.Create a variable of type string and try to add a number to it
 
  
-`let a = "Hello" `  
-`let b =5`  
-`console.log(a+b)`
+```
+let a = "Hello"   
+let b =5
+console.log(a+b)
+```
 
 o/p -- Hello5
 
@@ -124,47 +134,57 @@ o/p -- string
 
 3.Create a const object in javascript can you change it hold a number later
 
-`const a1 = {
+```
+const a1 = {
     name : "abc",
     class : 10,
     isFail : false
-}`  
-`a1=54`
+}  
+a1=54
+```
 
 
 o/p -- Uncaught TypeError: Assignment to constant variable.
 
 4.Try to add a new key to the const object in problem 3,were you able to do it?
 
-`a1['friend'] = "xyz"`  
-`console.log(a1)`
+```
+a1['friend'] = "xyz"  
+console.log(a1)
+```
 
 
 o/p -- {name: 'abc', class: 10, isFail: false, friend: 'xyz'}
 
 **Note:Can change the key value**
 
-`a1['name']="lmn"`  
-`console.log(a1)`
+```
+a1['name']="lmn"
+console.log(a1)
+```
 
 o/p -- {name: 'xyz', class: 10, isFail: false}
 
 5.Write a js program to create a word-meaning dictionary of 5 words
 
-`const dict = {   
+```
+const dict = {   
 appreciate:"recognize the full worth of.",
 bipolar:'having or relating to two poles or extremities.',
 colleague:'a person with whom one works in a profession or business.',
 definitely:'without doubt (used for emphasis).',
 empathy:'the ability to understand and share the feelings of another.'
 }
-console.log(dict)`
+console.log(dict)
+```
 
 o/p -- {appreciate: 'recognize the full worth of.', bipolar: 'having or relating to two poles or extremities.', colleague: 'a person with whom one works in a profession or business.', definitely: 'without doubt (used for emphasis).', empathy: 'the ability to understand and share the feelings of another.'}
 
 To access individual key value
 
-`console.log(dict.colleague) or console.log(dict['colleague'])`
+```
+console.log(dict.colleague) or console.log(dict['colleague'])
+```
 
 o/p -- a person with whom one works in a profession or business.
 *** 
@@ -197,17 +217,20 @@ first it will do 2 power 3 = 8 which is inside () then 8 power 2
 o/p - 4
 first it will do 3 power 2 = 9 then 4%9=4
 
-`let a = 10;
-console.log(a++)`  
+```let a = 10;
+console.log(a++)
+```  
 o/p - 10
 
-`let a = 10;
+```let a = 10;
 a++;
-console.log(a)`  
+console.log(a)
+```  
 o/p - 11
 
-`let a = 10;
-console.log(++a)`  
+```let a = 10;
+console.log(++a)
+```  
 o/p - 11
 
 pre increment/decrement -- first inc/dec then assign the value to variable
@@ -242,9 +265,11 @@ eg.
 
 eg.   
  
-`const a=6; const b="6";
+```
+const a=6; const b="6";
 console.log(a==b);
-console.log(a===b)`   
+console.log(a===b)
+```   
 
 o/p - true  it will return true because value is same 
       false it will return false because type is different (both value and type should be same)
@@ -263,33 +288,40 @@ o/p - true  it will return true because value is same
 
 ### if statement
 
-`if(condition){
+```
+if(condition){
     statement;
-}`
+}
+```
 
 ### if...else statement
 
-`if(condition){
+```
+if(condition){
    true statement;
 }  
 else{
   false statement;
-}`
+}
+```
 
 
 ### if...else if...else statement
 
-`if(condition 1){
+```
+if(condition 1){
      statement 1;
 }else if(condition 2){
   statement 2;
 }else{
   false statement;
-}`
+}
+```
 
 ### Switch statement
-`const expr = value2; `
-`switch(expr){
+```
+const expr = value2; 
+switch(expr){
   case value1:
   statement
   break;
@@ -298,8 +330,8 @@ else{
   break;
   default:
   statement
-  
-}`
+}
+```
 
 
 ### Ternary Operator 
@@ -324,23 +356,28 @@ it tells something to the user
 
 ## TypeCasting
 
-`let a;
-a = Number.parseInt(a)`
+```
+let a;
+a = Number.parseInt(a)
+```
       
 ### practice questions
 
 1.Use logical operator to find weather the age of a person lies b/w 10 and 20
 
-`const age= 25;
+```
+const age= 25;
 if(age>=10&&age<=20){
   console.log("true");
 }else{
   console.log("false");
-}`
+}
+```
 
 2.Demonstrate the use of switch statement in js.
 
-`const expr = "Hello";
+```
+const expr = "Hello";
 switch(expr){
   case "hello":
     console.log("match 1");
@@ -350,21 +387,25 @@ switch(expr){
     break;
   defaule:
     console.log("invalid");
-}`
+}
+```
 
 3.Write a javascript prg to find weather a no dividible by 3 and 2
 
-`const num = 55;
+```
+const num = 55;
 if(num%3==0 && num%2==0){
   console.log("true");
 }else{
   console.log("false");
-}`
+}
+```
 
 
 4.Write a js prg to find whether a no is divisible by 2 or 3.
 
-`const num = 45;
+```
+const num = 45;
 if(num%3==0 && num%2==0){
   console.log("div by both");
 }else if(num%3==0 ){
@@ -373,12 +414,15 @@ if(num%3==0 && num%2==0){
    console.log("div by 2");
 }else{
   console.log("false");
-}`
+}
+```
 
 5.Print "You can drive" or "you cannot drive" based on age being greater then 20 using ternary operator.
 
-`const age=25;
-age>=20?console.log("you can drive"):console.log("you cannot drive")`
+```
+const age=25;
+age>=20?console.log("you can drive"):console.log("you cannot drive")
+```
 
 
 
@@ -412,14 +456,16 @@ for(datatype variable_name in object_name){
 
 eg.
 
-`let marks = {
+```
+let marks = {
   Kannada:95,
   Engilsh:90,
   Maths:92
 }
 for(let a in marks){
   console.log(a+"   "+marks[a]);
-}`
+}
+```
 
 *** Note: for in loop also work with array. ***
 
@@ -432,10 +478,12 @@ for(datatype variable_name of object_name){
   statement
 }
 
-`let marks = [50,10,54,77]
+```
+let marks = [50,10,54,77]
 for(let a of marks){
   console.log(a);
-}`
+}
+```
 
 *** Note: for of loop doesn't used to manipulate the values of an object. *** 
  
@@ -473,10 +521,12 @@ By using arrow function
 
 eg.
 
-`const sum = (p,q)=>{
+```
+const sum = (p,q)=>{
   return p+q;
 }
-console.log(sum(10,10))`
+console.log(sum(10,10))
+```
 
 -we can also create default function which does not contains arguments.
 
@@ -485,7 +535,8 @@ console.log(sum(10,10))`
 
 1.Write a prg to print the marks of a students in an object using for loop.
 
-`let marks = {
+```
+let marks = {
   tom:90,
   jerry:95,
   Naruto:50,
@@ -493,11 +544,13 @@ console.log(sum(10,10))`
 }
 for(let i=0;i<Object.keys(marks).length;i++){
    console.log(" marks of "+Object.keys(marks)[i]+" is "+marks[Object.keys(marks)[i]])
-}`
+}
+```
 
 2.Write the previous prg using for in loop.
 
-`let marks = {
+```
+let marks = {
   tom:90,
   jerry:95,
   Naruto:50,
@@ -505,11 +558,12 @@ for(let i=0;i<Object.keys(marks).length;i++){
 }
 for(let a in marks){
   console.log(a+" marks is "+marks[a])
-}` 
+}
+``` 
 
 3.Write a prg to print "try again" until the user enter the correct no.
 
-`
+```
  let a;
   num = Number.parseInt(a);
   while(a!=5){
@@ -517,12 +571,13 @@ for(let a in marks){
     a= prompt("Enter the no");
   }
   console.log("Correct no");
-`
+```
 
 or
 
 
-` let flag = true;
+```
+let flag = true;
   while(flag){
     let a;
 a= prompt("Enter the no"); 
@@ -533,19 +588,78 @@ a= prompt("Enter the no");
     }else{
       console.log("try again...!")
     }
-  }`
+  }
+  ```
 
 4.Write a function to find a mean of 5 no.
 
-`function mean(a,b,c,d,e){
+```
+function mean(a,b,c,d,e){
       return (a+b+c+d+e)/5;
 }
-mean(10,15,2,5,4);`
+mean(10,15,2,5,4);
+```
 
 or 
 
-`const mean = (a,b,c,d,e)=>{
+```
+const mean = (a,b,c,d,e)=>{
   return (a+b+c+d+e)/5;
 }
-mean(10,15,2,5,4);`
+mean(10,15,2,5,4);
+```
+
+
+## Strings
+
+- which is written inside single quots,double quotes.
+- string or immutable.
+
+eg.    
+
+ `let name = "Tom"`  
+`let nsme1 = 'Jerry'`
+
+Another method using backtick(``)
+
+Template Literals
+
+eg.
+
+```
+let boy1 = "Tom"
+let boy2 = 'Jerry'
+let sentance =  `${boy1} is a friend of ${boy2}`
+```
+
+-inside backtick we can use single quotes as well as double quotes
+-The above example is also calleds **string Interpolation** --we can directly variable inside templete literals.
+
+### Escape Sequence Character
+
+- \ -- is escape sequence character.
+- used to include single quote (') or double quote (") in the string
+  
+  eg.
+  ```
+  let a= 'doesn\'t'
+  console.log(a)
+  ```
+
+other escape sequence character
+- \n -- new line
+- \t -- tab
+- \r -- carriage return (Gives the position of ( \ ) in the string).
+
+## String Methods
+
+- length
+- toUpperCase()
+- toLowerCase()
+- slice(start_index,end_index) **Note : end_index is not included**
+- replace("existing_word","new_word")
+- concat("arg1",arg2,arg3,....)
+- trim()
+
+
 
