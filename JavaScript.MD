@@ -302,7 +302,7 @@ else{
 }`
 
 
-### Turnary Operator 
+### Ternary Operator 
 
 
 `condition ? exprIfTrue : exprIfFalse`
@@ -327,6 +327,225 @@ it tells something to the user
 `let a;
 a = Number.parseInt(a)`
       
+### practice questions
+
+1.Use logical operator to find weather the age of a person lies b/w 10 and 20
+
+`const age= 25;
+if(age>=10&&age<=20){
+  console.log("true");
+}else{
+  console.log("false");
+}`
+
+2.Demonstrate the use of switch statement in js.
+
+`const expr = "Hello";
+switch(expr){
+  case "hello":
+    console.log("match 1");
+    break;
+  case "Hello":
+    console.log("match 2");
+    break;
+  defaule:
+    console.log("invalid");
+}`
+
+3.Write a javascript prg to find weather a no dividible by 3 and 2
+
+`const num = 55;
+if(num%3==0 && num%2==0){
+  console.log("true");
+}else{
+  console.log("false");
+}`
 
 
+4.Write a js prg to find whether a no is divisible by 2 or 3.
+
+`const num = 45;
+if(num%3==0 && num%2==0){
+  console.log("div by both");
+}else if(num%3==0 ){
+  console.log("div by 3");
+}else if(num%2==0){
+   console.log("div by 2");
+}else{
+  console.log("false");
+}`
+
+5.Print "You can drive" or "you cannot drive" based on age being greater then 20 using ternary operator.
+
+`const age=25;
+age>=20?console.log("you can drive"):console.log("you cannot drive")`
+
+
+
+# Day 3
+
+## Loops
+
+- for loop
+- while loop
+- do..while loop
+- for..of loop  -- loop through the value of an object
+- for..in loop  -- loop through the keys of an object
+
+### for loop
+
+Syntax:
+  
+
+for(initialization;condition;inc/dec){
+  statement block
+}
+  
+
+### for in loop
+
+Syntax:
+
+for(datatype variable_name in object_name){
+  statement
+}
+
+eg.
+
+`let marks = {
+  Kannada:95,
+  Engilsh:90,
+  Maths:92
+}
+for(let a in marks){
+  console.log(a+"   "+marks[a]);
+}`
+
+*** Note: for in loop also work with array. ***
+
+
+### for of loop
+
+Syntax:
+
+for(datatype variable_name of object_name){
+  statement
+}
+
+`let marks = [50,10,54,77]
+for(let a of marks){
+  console.log(a);
+}`
+
+*** Note: for of loop doesn't used to manipulate the values of an object. *** 
+ 
+
+### while loop
+
+Syntax:
+
+while(condition){
+  statement execute untill the condition is satisfied
+}
+
+### do..while loop
+
+
+Syntax:
+
+do{
+  Statement;
+}while(condition);
+
+
+## Functions
+
+Syntax:
+
+function function_name(arguments){
+  statements
+}
+
+or 
+
+By using arrow function
+
+
+eg.
+
+`const sum = (p,q)=>{
+  return p+q;
+}
+console.log(sum(10,10))`
+
+-we can also create default function which does not contains arguments.
+
+
+### Practice Question
+
+1.Write a prg to print the marks of a students in an object using for loop.
+
+`let marks = {
+  tom:90,
+  jerry:95,
+  Naruto:50,
+  sasuke:90
+}
+for(let i=0;i<Object.keys(marks).length;i++){
+   console.log(" marks of "+Object.keys(marks)[i]+" is "+marks[Object.keys(marks)[i]])
+}`
+
+2.Write the previous prg using for in loop.
+
+`let marks = {
+  tom:90,
+  jerry:95,
+  Naruto:50,
+  sasuke:90
+}
+for(let a in marks){
+  console.log(a+" marks is "+marks[a])
+}` 
+
+3.Write a prg to print "try again" until the user enter the correct no.
+
+`
+ let a;
+  num = Number.parseInt(a);
+  while(a!=5){
+    console.log("Try again..."); 
+    a= prompt("Enter the no");
+  }
+  console.log("Correct no");
+`
+
+or
+
+
+` let flag = true;
+  while(flag){
+    let a;
+a= prompt("Enter the no"); 
+  num = Number.parseInt(a);
+    if(num===5){
+      flag=false;
+      console.log("congrats...!");
+    }else{
+      console.log("try again...!")
+    }
+  }`
+
+4.Write a function to find a mean of 5 no.
+
+`function mean(a,b,c,d,e){
+      return (a+b+c+d+e)/5;
+}
+mean(10,15,2,5,4);`
+
+or 
+
+`const mean = (a,b,c,d,e)=>{
+  return (a+b+c+d+e)/5;
+}
+mean(10,15,2,5,4);`
 
