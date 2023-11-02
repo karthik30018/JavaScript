@@ -661,5 +661,72 @@ other escape sequence character
 - concat("arg1",arg2,arg3,....)
 - trim()
 
+### practice Question
 
+1.What will the following print in js?
+```console.log("har\"".length)```
+
+o/p -- 4
+
+2.Explore the includes starts with and ends with function of a string.
+
+```
+const sen = 'The quick brown fox jumbs over the lazy dog.'
+const word = 'fox'
+console.log(`The word " ${word} " ${sen.includes(word)? 'is' : 'is not'} in the sentence ` )
+```
+
+o/p -- The word " fox " is in the sentence 
+
+
+3.Write a prg to convert given string to lowercase.
+
+
+```
+let str = "Hello World!"
+console.log(str.toLowerCase())
+```
+
+o/p -- hello world!
+
+
+4.Extract the amount out of this string.
+` Please give Rs 1000`
+
+```
+let sen1="Please give Rs 1000"
+let amt = Number.parseInt(sen1.slice(15)) 
+console.log(amt)
+```
+
+5.Try to change 4th character of a given string .
+
+```
+let sen2 = "Please give Rs 1000"
+let res = sen2.replace('a',4)
+console.log(res)
+```
+o/p -- Ple4se give Rs 1000
+
+
+** Note : but we cannot change existing string
+```
+let sen2 = "Please give Rs 1000"
+sen2[4]="r"
+console.log(sen1)
+```
+o/p -- Please give Rs 1000
+
+
+# Day 4
+
+## Arrays
+
+- In js array are object(The typeof() opertor on array return object)
+- We can store differnt type of elements(eg. in a array we can store string,number,character,null,so on...)
+- If we try to access a index number which is greater then array length it will display undefined
+
+Syntax:
+
+data_type array_name = [val1,val2,val3....]
 
