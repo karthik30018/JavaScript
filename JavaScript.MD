@@ -730,3 +730,56 @@ Syntax:
 
 data_type array_name = [val1,val2,val3....]
 
+### Array Methods
+
+- toString() -- (Used to convert array to string)
+- join("val") -- (it is used to join the val between each elements,it replaces the comma by val it converts the array into string automatically)
+- pop() -- (Remove the last element,returns the poped element eg. let a = arr.pop() -- a will store the removed elements)
+- push(val) -- (Add the val at end,return the new length of the array eg. let a = arr.push(9) after 9 is added to the array it returns the new length of array in the variable a)
+- shift() -- (similar to pop() but removes the element at begining)
+- unshift() -- (similar to push() but adds the element at begining)
+- delete -- its an operator ,it will delete the element which is present in the specified index **but the array length does not change** eg. delete arr[0] -- the 0th element is deleted but length remains same.
+- concat() -- used to add 2 or more array.
+- sort() -- used to sort the array in ascending order(according to alphabets).
+  Ascending sorting for numbers
+  ```
+  let compare = (a,b)=>{
+    return a - b
+  }
+  let num = [10,56,45,89]
+    num.sort(compare)
+    console.log(num)
+  ```
+    Descending sorting for numbers
+  ```
+  let compare = (a,b)=>{
+    return b - a
+  }
+  let num = [10,56,45,89]
+    num.sort(compare)
+    console.log(num)
+  ```
+-  reverse() -- Reverse the array.
+-  splice() -- used to add new items to an array  
+Syntax :   
+ splice(position to add,no of elements to remove,elements to add seperated by comma)
+ ```
+   let num = [10,56,45,89]
+  num.splice(2,3,49,56,87,91)
+  console.log(num)
+ ```
+ o/p -- [10, 56, 49, 56, 87, 91]
+ 
+-slice() -- slices out a piece from an array,  
+        -- creates a sub array
+        -- does not modify the original array.
+```
+let num = [10,56,45,89]
+console.log(num.slice(1))
+console.log(num.slice(2,3)) **does not include the ending index**
+```
+o/p -- [56, 45, 89]  
+       [45]
+    
+
+
