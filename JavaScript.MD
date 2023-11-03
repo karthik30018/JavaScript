@@ -1,6 +1,6 @@
 # Day 1
 
-## VARIABLES IN JAVA
+## VARIABLES IN JAVA SCRIPT
 
 In js the variable type can be changed during Runtime(Dynamically typed language) 
 
@@ -466,6 +466,10 @@ for(let a in marks){
   console.log(a+"   "+marks[a]);
 }
 ```
+o/p -   
+Kannada   95  
+Engilsh   90  
+ Maths   92
 
 *** Note: for in loop also work with array. ***
 
@@ -484,6 +488,11 @@ for(let a of marks){
   console.log(a);
 }
 ```
+o/p -   
+ 50  
+ 10  
+ 54  
+ 77  
 
 *** Note: for of loop doesn't used to manipulate the values of an object. *** 
  
@@ -780,6 +789,204 @@ console.log(num.slice(2,3)) **does not include the ending index**
 ```
 o/p -- [56, 45, 89]  
        [45]
-    
+
+### Using loops with array
 
 
+- for loop
+```
+let a= [10,85,65,45,456]
+for(let i=0;i<a.length;i++){
+  console.log(a[i])
+}
+```
+
+- forEach loop
+- used to perform some operation on existing array  
+Syntax:
+
+```
+arr.map((value,index,array)=>{
+  statement
+})
+```
+
+```
+let a= [10,85,65,45,456]
+a.forEach((ele)=>{
+  console.log(ele)
+})
+```
+
+- Array from -- used to create an array from any other object.
+  
+```
+let name = "JavaScript"
+let arr = Array.from(name)
+console.log(arr)
+```
+o/p -- ['J', 'a', 'v', 'a', 'S', 'c', 'r', 'i', 'p', 't']
+
+- for...of loop
+
+```
+let a= [10,85,65,45,456]
+for(let i of a){
+  console.log(i)
+}
+```
+
+- for...in loop -- prints the index no.
+  
+```
+let a= [10,85,65,45,456]
+for(let i in a){
+  console.log(i)
+}
+```
+
+# Day 4
+
+## map() 
+
+- creates a new array by performing some operation on each array elements.
+- Similar to forEach but used to create new array 
+
+Syntax:
+
+```
+arr.map((value,index,array)=>{
+  statement
+})
+```
+```
+let arr= [14,56,78,89]
+let arr1 = arr.map((val,index,arr)=>{
+  console.log(val+1,index,arr)
+}) 
+
+```
+o/p --
+val  index  array    
+15 0 (4) [14, 56, 78, 89]  
+57 1 (4) [14, 56, 78, 89]  
+79 2 (4) [14, 56, 78, 89]  
+90 3 (4) [14, 56, 78, 89]
+
+## filter()
+
+Syntax:
+```
+arr.filter((ele)=>{
+  condition to select array elements
+})
+```
+
+```
+let arr= [14,56,78,89]
+let arr1 = arr.filter((ele)=>{
+  return ele<60
+})
+console.log(arr1)
+```
+o/p - [14, 56]
+
+## reduce()
+
+Syntax:
+```
+arr.reduce((val1,val2,val3...)=>{
+    operation
+})
+```
+
+```
+let arr = [1,2,3,4,5]
+let arr1 = arr.reduce((val1,val2)=>{
+  return val1 + val2
+})
+console.log(arr1)
+```
+
+or
+```
+let arr = [1,2,3,4,5]
+const con = (val1,val2)=>{
+  return val1 + val2
+}
+let arr1 = arr.reduce(con)
+console.log(arr1)
+```
+o/p -- 15 
+
+steps:
+- first arr[0] is added with arr[1] 
+- then the result will added with arr[2]
+- it keeps on repeating untill all the elements are added.
+
+### Practice Question
+
+1. Create an array of numbers and take input from the user to add numbers to this array.
+
+```
+let arr = [1,2,3,4,5,6,78,45]
+let a= prompt("Enter a number")
+a= Number.parseInt(a)
+arr.push(a)
+console.log(arr)
+```
+o/p - enter a number  
+100   
+[1, 2, 3, 4, 5, 6, 78, 45, 100]
+
+2. Keep adding numbers to an array in qst1 until 0 is added to the array.
+
+```
+let a
+let arr = [1,2,3,4,5,6,78,45]
+do{
+a= prompt("Enter a number")
+a= Number.parseInt(a)
+arr.push(a)
+}while(a!==0);
+console.log(arr)
+```
+o/p --   
+Enter a number  
+45  
+Enter a number  
+78  
+Enter a number  
+0  
+[1, 2, 3, 4, 5, 6, 78, 45, 45, 78, 0]
+
+3. Filter for no divisible by 10 from a array.
+```
+let arr = [1, 2, 3, 40, 5, 6, 78, 45, 450, 780, 100]
+let a = arr.filter((val)=>{
+    return val%10===0
+})
+console.log(a)
+```
+o/p -- [40, 450, 780, 100]
+
+4. Create an array of square of given no.
+```
+let arr = [1,2,3,4,5,6,78,45]
+let a = arr.map((val)=>{
+  return val * val
+})
+console.log(a)
+```
+o/p -- [1, 4, 9, 16, 25, 36, 6084, 2025]
+
+5. Use reduce to calculate the factorial of a given no from an array of first n natural no(n being the no whose factorial needs to be calculated)
+
+```
+let arr = [1,2,3,4,5]
+let a = arr.reduce((v1,v2)=>{
+    return v1*v2
+})
+console.log(a)
+```
+o/p -- 120
