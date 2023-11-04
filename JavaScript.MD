@@ -1,5 +1,8 @@
 # Day 1
 
+- JavaScript is invented to create web pages.
+- JS is responsible for the login in web pages.
+
 ## VARIABLES IN JAVA SCRIPT
 
 In js the variable type can be changed during Runtime(Dynamically typed language) 
@@ -990,3 +993,38 @@ let a = arr.reduce((v1,v2)=>{
 console.log(a)
 ```
 o/p -- 120
+
+# Day 5
+
+## 
+
+### write a js program to generate a random no and store it in a variable . The program then takes an input from the user to tell them weather the guss was correct , greater or lesser then the original number 
+1.(100 - No of gusses) is the score of the user  
+The prg is expected to terminate once the no is gussed.No should be between 1 - 100. 
+
+```
+const rand_num = Math.floor(Math.random() * (100 - 1) + 1)
+let count = 0
+let flag = false
+ let guss
+do{
+  let guss = Number.parseInt(prompt("Enter the guss should be with in 0 - 100"))
+ 
+  if(rand_num===guss){
+    flag = true
+    break
+  }else if(guss<rand_num){
+    console.log("guss is less then the no")
+  }else{
+    console.log("guss is greater then the no")
+  }
+    count = count + 10;
+  
+}while(rand_num!==guss && count<=100)
+let score = 100 - count;
+if(flag===true){
+console.log("Congratulation..! you won your score is "+ score + " out of 100" )
+}else{
+  console.log("you losse...! better luck next time")
+}
+```
